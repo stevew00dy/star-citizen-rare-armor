@@ -1,8 +1,8 @@
-# Star Citizen — Rare Armor Guide (4.5 / 4.6)
+# Star Citizen — Personal Armour Tracker (4.5 / 4.6)
 
-A quick-reference guide to the rarest armor sets in Star Citizen: locations, set pieces, variants, and indicative grey-market values.
+A tracker for the rarest armor sets in Star Citizen: locations, set pieces, variants, and indicative grey-market values. Track progress and favourites.
 
-**Use the guide:** **[https://stevew00dy.github.io/star-citizen-rare-armor/](https://stevew00dy.github.io/star-citizen-rare-armor/)**
+**Use the tracker:** **[https://stevew00dy.github.io/star-citizen-rare-armor/](https://stevew00dy.github.io/star-citizen-rare-armor/)**
 
 ## Contents
 
