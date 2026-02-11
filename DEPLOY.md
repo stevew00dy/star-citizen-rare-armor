@@ -1,5 +1,18 @@
 # Deploy to GitHub Pages
 
+## Quick deploy (after code changes)
+
+```powershell
+cd "d:\Cursor\Star Citizen\02-research\rare-armor-guide"
+.\deploy.ps1
+```
+
+Builds, syncs output, commits, and pushes to `stevew00dy/star-citizen-rare-armor`.
+
+---
+
+## Initial setup (one-time)
+
 1. **Create the repo on GitHub**
    - Go to [github.com/new](https://github.com/new)
    - Repository name: **`star-citizen-rare-armor`** (must match for the URL to work)
