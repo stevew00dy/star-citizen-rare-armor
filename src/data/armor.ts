@@ -25,7 +25,7 @@ export const armors: ArmorItem[] = [
     name: 'Corbel',
     type: 'Heavy',
     manufacturer: 'Odin Munitions',
-    where: 'ASD Onyx Research — Research Wing → Site B (elevator down)',
+    where: 'ASD Onyx Research facilities',
     how: 'Loot boxes scattered in Site B; full set from multiple boxes.',
     val: '1.5M–145M aUEC',
     setPieces: [
@@ -80,7 +80,7 @@ export const armors: ArmorItem[] = [
     name: 'Geist ASD',
     type: 'Light',
     manufacturer: 'Kilgore & Poole',
-    where: 'ASD Onyx Research (Engineering & Research wings)',
+    where: 'ASD facilities',
     how: 'Loot boxes and NPC drops throughout the facility.',
     val: '5M–32M aUEC',
     setPieces: [
