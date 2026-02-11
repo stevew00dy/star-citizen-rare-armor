@@ -1,9 +1,5 @@
-# Deploy rare-armor-guide to GitHub Pages
-# Run from: Star Citizen\02-research\rare-armor-guide
-#
-# 1. Build (creates dist/ with new armor data)
-# 2. Sync dist output to repo root
-# 3. Commit and push
+# Deploy to GitHub Pages: build, sync dist to root, commit, push.
+# Run from project root: .\deploy.ps1 ["optional commit message"]
 
 $ErrorActionPreference = "Stop"
 $repoRoot = $PSScriptRoot
@@ -16,7 +12,6 @@ try {
     if ($LASTEXITCODE -ne 0) { throw "Build failed" }
 
     Write-Host "Syncing dist to repo root..." -ForegroundColor Cyan
-    # Copy built output (index, assets). armor-images stays from repo root (dist may have stale copy)
     Copy-Item -Path "dist\index.html" -Destination "index.html" -Force
     Copy-Item -Path "dist\vite.svg" -Destination "vite.svg" -Force
     Remove-Item -Path "assets\*" -Recurse -Force -ErrorAction SilentlyContinue
@@ -24,12 +19,10 @@ try {
 
     Write-Host "Staging changes..." -ForegroundColor Cyan
     git add index.html vite.svg assets/
-    # Stage armor-images if modified (e.g. overlord-gilded.png deleted)
     git add -u armor-images/
     git status --short
 
-    $msg = "Fix: Overlord Gilded image (was duplicate of Carnifex); show no image until proper asset"
-    if ($args.Count -gt 0) { $msg = $args[0] }
+    $msg = if ($args.Count -gt 0) { $args[0] } else { "Deploy: rare armor tracker update" }
     git commit -m $msg
 
     Write-Host "Pushing to origin..." -ForegroundColor Cyan

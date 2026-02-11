@@ -1,13 +1,6 @@
 # Deploy to GitHub Pages
 
-## Quick deploy (after code changes)
-
-```powershell
-cd "d:\Cursor\Star Citizen\02-research\rare-armor-guide"
-.\deploy.ps1
-```
-
-Builds, syncs output, commits, and pushes to `stevew00dy/star-citizen-rare-armor`.
+**Deploy:** From project root run `.\deploy.ps1` (optionally pass a commit message). Builds, syncs dist to root, commits, pushes.
 
 ---
 
@@ -21,7 +14,7 @@ Builds, syncs output, commits, and pushes to `stevew00dy/star-citizen-rare-armor
 
 2. **Push this folder**
    ```powershell
-   cd "d:\Cursor\Star Citizen\02-research\star-citizen-rare-armor"
+   cd "d:\Cursor\Star Citizen\02-research\rare-armor-guide"
    git remote add origin https://github.com/YOUR_USERNAME/star-citizen-rare-armor.git
    git push -u origin main
    ```

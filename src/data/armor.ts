@@ -145,7 +145,7 @@ export const armors: ArmorItem[] = [
       { slot: 'Legs', item: 'Overlord Legs Gilded' },
     ],
     variants: ['Gilded'],
-    image: null, // Same file was duped with carnifex (skull = Carnifex); Overlord Gilded = gold/black, no proper image yet
+    image: null, // No correct image yet (was duped with Carnifex)
     rare: true,
   },
   {
