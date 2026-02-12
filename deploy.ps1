@@ -7,23 +7,19 @@ $repoRoot = $PSScriptRoot
 Push-Location $repoRoot
 
 try {
-    Write-Host "Restoring source index for build..." -ForegroundColor Cyan
-    Copy-Item -Path "index.template.html" -Destination "index.html" -Force
     Write-Host "Building..." -ForegroundColor Cyan
     npm run build
     if ($LASTEXITCODE -ne 0) { throw "Build failed" }
 
     Write-Host "Syncing dist to repo root..." -ForegroundColor Cyan
     Copy-Item -Path "dist\index.html" -Destination "index.html" -Force
-    if (Test-Path "dist\vite.svg") { Copy-Item -Path "dist\vite.svg" -Destination "vite.svg" -Force }
+    Copy-Item -Path "dist\vite.svg" -Destination "vite.svg" -Force
     Remove-Item -Path "assets\*" -Recurse -Force -ErrorAction SilentlyContinue
     Copy-Item -Path "dist\assets\*" -Destination "assets\" -Recurse -Force
 
     Write-Host "Staging changes..." -ForegroundColor Cyan
     git add index.html vite.svg assets/
     git add -u armor-images/
-    git add package.json package-lock.json vite.config.ts tsconfig.json tsconfig.node.json index.template.html deploy.ps1
-    git add src/
     git status --short
 
     $msg = if ($args.Count -gt 0) { $args[0] } else { "Deploy: rare armor tracker update" }
