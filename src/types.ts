@@ -15,6 +15,7 @@ export interface ArmorItem {
   val: string
   setPieces?: SetPiece[]
   variants: string[]
+  variantNote?: string
   image: string | null
   rare?: boolean
 }
