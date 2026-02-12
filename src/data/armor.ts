@@ -71,7 +71,7 @@ export const armors: ArmorItem[] = [
       { slot: 'Legs', item: 'Morozov-SH Legs' },
       { slot: 'Backpack', item: 'Morozov-CH Backpack Pyrotechnic' },
     ],
-    variants: ['Pyrotechnic', 'Horizon', 'Aftershock', 'Redshift', 'Snowdrift', 'Terracotta', 'Crusader', 'Red Alert'],
+    variants: ['Pyrotechnic Horizon', 'Aftershock', 'Redshift', 'Snowdrift', 'Terracotta', 'Crusader', 'Red Alert'],
     image: 'armor-images/morozov.png',
     rare: true,
   },
