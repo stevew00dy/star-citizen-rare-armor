@@ -11,7 +11,6 @@ import {
   Check,
   MapPin,
   Shield,
-  ExternalLink,
 } from "lucide-react";
 import { armors } from "./data";
 import type { ArmorSet, ArmorType } from "./types";
@@ -412,31 +411,18 @@ function ArmorCard({
 
 /* ─── Footer ─── */
 
-const LINKS = [
-  { label: "Undisputed Noobs", href: "https://stevew00dy.github.io/undisputed-noobs/" },
-  { label: "Exec Hangar Tracker", href: "https://stevew00dy.github.io/exec-hangar-tracker/" },
-  { label: "Wikelo Tracker", href: "https://stevew00dy.github.io/wikelo-tracker/" },
-];
-
 function Footer() {
   return (
-    <footer className="border-t border-dark-700 mt-12">
-      <div className="max-w-[1400px] mx-auto px-4 py-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-        <span className="text-xs text-text-muted">Undisputed Noobs &middot; Star Citizen Tools</span>
-        <div className="flex items-center gap-4">
-          {LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 text-xs text-text-muted hover:text-accent-amber transition-colors duration-200"
-            >
-              {link.label}
-              <ExternalLink className="w-3 h-3" />
-            </a>
-          ))}
+    <footer className="border-t border-dark-700 mt-12 py-6">
+      <div className="max-w-[1600px] mx-auto px-4 flex flex-col items-center gap-3">
+        <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-1">
+          <a href="/" className="text-xs text-text-muted hover:text-accent-amber transition-colors">Home</a>
+          <a href="/armor-tracker/" className="text-xs text-text-muted hover:text-accent-amber transition-colors">Armour Tracker</a>
+          <a href="/exec-hangar-tracker/" className="text-xs text-text-muted hover:text-accent-amber transition-colors">Exec Hangar Tracker</a>
+          <a href="/wikelo-tracker/" className="text-xs text-text-muted hover:text-accent-amber transition-colors">Wikelo Tracker</a>
+          <a href="https://www.youtube.com/@undisputednoobs" target="_blank" rel="noopener noreferrer" className="text-xs text-text-muted hover:text-accent-amber transition-colors">YouTube</a>
         </div>
+        <p className="text-[10px] text-text-muted/50">Unofficial fan-made tool. Not affiliated with Cloud Imperium Games.</p>
       </div>
     </footer>
   );
