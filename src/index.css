@@ -34,6 +34,10 @@ body {
 * {
   scrollbar-width: none;
 }
+
+button, a, [role="button"], summary {
+  cursor: pointer;
+}
 *::-webkit-scrollbar {
   display: none;
 }
